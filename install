@@ -1,0 +1,19 @@
+#!/bin/bash
+set -e
+BASEDIR="$(dirname "$BASH_SOURCE")"
+cd "$BASEDIR"
+if (( $EUID != 0 )); then
+    printf "\n-----Sorry! Run with root privilege (for example with 'sudo ./install')\n\n"
+    exit 1
+fi
+KERNEL=${1-$(uname -r)}
+make KERNEL=$KERNEL
+make install KERNEL=$KERNEL
+modprobe mt7630e -S $KERNEL
+modprobe mt76xx -S $KERNEL
+echo "
+The driver has been successfully installed.
+If you don't have wifi yet, try to reboot.
+If bluetooth doesn't work, read the bluetooth
+section in README.md file and follow through.
+"

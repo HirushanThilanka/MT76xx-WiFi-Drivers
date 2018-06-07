@@ -1,0 +1,162 @@
+#include <linux/module.h>
+#include <linux/vermagic.h>
+#include <linux/compiler.h>
+
+MODULE_INFO(vermagic, VERMAGIC_STRING);
+MODULE_INFO(name, KBUILD_MODNAME);
+
+__visible struct module __this_module
+__attribute__((section(".gnu.linkonce.this_module"))) = {
+	.name = KBUILD_MODNAME,
+	.init = init_module,
+#ifdef CONFIG_MODULE_UNLOAD
+	.exit = cleanup_module,
+#endif
+	.arch = MODULE_ARCH_INIT,
+};
+
+#ifdef RETPOLINE
+MODULE_INFO(retpoline, "Y");
+#endif
+
+static const struct modversion_info ____versions[]
+__used
+__attribute__((section("__versions"))) = {
+	{ 0xec49fba3, __VMLINUX_SYMBOL_STR(module_layout) },
+	{ 0xf2d520b9, __VMLINUX_SYMBOL_STR(ieee80211_rx_napi) },
+	{ 0xe77a21a, __VMLINUX_SYMBOL_STR(kmalloc_caches) },
+	{ 0xd2b09ce5, __VMLINUX_SYMBOL_STR(__kmalloc) },
+	{ 0xf9a482f9, __VMLINUX_SYMBOL_STR(msleep) },
+	{ 0xce31b8a1, __VMLINUX_SYMBOL_STR(pv_lock_ops) },
+	{ 0x97868aef, __VMLINUX_SYMBOL_STR(__kfifo_alloc) },
+	{ 0x6dc514c2, __VMLINUX_SYMBOL_STR(ieee80211_queue_work) },
+	{ 0x43a53735, __VMLINUX_SYMBOL_STR(__alloc_workqueue_key) },
+	{ 0x19f462ab, __VMLINUX_SYMBOL_STR(kfree_call_rcu) },
+	{ 0x79aa04a2, __VMLINUX_SYMBOL_STR(get_random_bytes) },
+	{ 0x6b631294, __VMLINUX_SYMBOL_STR(pci_disable_device) },
+	{ 0x2194bdf7, __VMLINUX_SYMBOL_STR(hrtimer_cancel) },
+	{ 0x47939e0d, __VMLINUX_SYMBOL_STR(__tasklet_hi_schedule) },
+	{ 0xd9d3bcd3, __VMLINUX_SYMBOL_STR(_raw_spin_lock_bh) },
+	{ 0xb555517a, __VMLINUX_SYMBOL_STR(ieee80211_rts_get) },
+	{ 0x3e2d0910, __VMLINUX_SYMBOL_STR(delayed_work_timer_fn) },
+	{ 0x614753e9, __VMLINUX_SYMBOL_STR(ieee80211_beacon_get_tim) },
+	{ 0x88bfa7e, __VMLINUX_SYMBOL_STR(cancel_work_sync) },
+	{ 0xc29957c3, __VMLINUX_SYMBOL_STR(__x86_indirect_thunk_rcx) },
+	{ 0xb7dbb073, __VMLINUX_SYMBOL_STR(ieee80211_unregister_hw) },
+	{ 0xe8663ae6, __VMLINUX_SYMBOL_STR(ieee80211_channel_to_frequency) },
+	{ 0xc56b4200, __VMLINUX_SYMBOL_STR(__dev_kfree_skb_any) },
+	{ 0xeae3dfd6, __VMLINUX_SYMBOL_STR(__const_udelay) },
+	{ 0x5bf6034d, __VMLINUX_SYMBOL_STR(pci_release_regions) },
+	{ 0x4d90357b, __VMLINUX_SYMBOL_STR(param_ops_bool) },
+	{ 0xe656d2cb, __VMLINUX_SYMBOL_STR(led_classdev_resume) },
+	{ 0xe4f742fb, __VMLINUX_SYMBOL_STR(init_timer_key) },
+	{ 0x744cc231, __VMLINUX_SYMBOL_STR(cancel_delayed_work_sync) },
+	{ 0xbf63e976, __VMLINUX_SYMBOL_STR(mutex_unlock) },
+	{ 0x54478cfb, __VMLINUX_SYMBOL_STR(ieee80211_iterate_active_interfaces_atomic) },
+	{ 0x98a27486, __VMLINUX_SYMBOL_STR(wiphy_rfkill_start_polling) },
+	{ 0x4629334c, __VMLINUX_SYMBOL_STR(__preempt_count) },
+	{ 0x97651e6c, __VMLINUX_SYMBOL_STR(vmemmap_base) },
+	{ 0x15ba50a6, __VMLINUX_SYMBOL_STR(jiffies) },
+	{ 0x772583c8, __VMLINUX_SYMBOL_STR(skb_trim) },
+	{ 0x316b1ada, __VMLINUX_SYMBOL_STR(ieee80211_stop_queues) },
+	{ 0xc6750a57, __VMLINUX_SYMBOL_STR(of_led_classdev_register) },
+	{ 0x3fc05126, __VMLINUX_SYMBOL_STR(__netdev_alloc_skb) },
+	{ 0x91fa900f, __VMLINUX_SYMBOL_STR(ieee80211_stop_queue) },
+	{ 0xe85b5eee, __VMLINUX_SYMBOL_STR(ieee80211_tx_status) },
+	{ 0x19ad6985, __VMLINUX_SYMBOL_STR(__init_waitqueue_head) },
+	{ 0x9a65140f, __VMLINUX_SYMBOL_STR(arch_dma_supported) },
+	{ 0xa98a815b, __VMLINUX_SYMBOL_STR(pci_set_master) },
+	{ 0x7e526bfa, __VMLINUX_SYMBOL_STR(__x86_indirect_thunk_r10) },
+	{ 0xfb578fc5, __VMLINUX_SYMBOL_STR(memset) },
+	{ 0x4fa24aee, __VMLINUX_SYMBOL_STR(pci_restore_state) },
+	{ 0x6accc83d, __VMLINUX_SYMBOL_STR(dev_err) },
+	{ 0x1916e38c, __VMLINUX_SYMBOL_STR(_raw_spin_unlock_irqrestore) },
+	{ 0x43e47284, __VMLINUX_SYMBOL_STR(ieee80211_alloc_hw_nm) },
+	{ 0xf0c2bfce, __VMLINUX_SYMBOL_STR(__mutex_init) },
+	{ 0x27e1a049, __VMLINUX_SYMBOL_STR(printk) },
+	{ 0x19d13ef6, __VMLINUX_SYMBOL_STR(ieee80211_free_txskb) },
+	{ 0x3c3fce39, __VMLINUX_SYMBOL_STR(__local_bh_enable_ip) },
+	{ 0xe1537255, __VMLINUX_SYMBOL_STR(__list_del_entry_valid) },
+	{ 0x4c9d28b0, __VMLINUX_SYMBOL_STR(phys_base) },
+	{ 0x27cb133b, __VMLINUX_SYMBOL_STR(eeprom_93cx6_multiread) },
+	{ 0xfaef0ed, __VMLINUX_SYMBOL_STR(__tasklet_schedule) },
+	{ 0xeb1a3b3d, __VMLINUX_SYMBOL_STR(pci_read_config_word) },
+	{ 0x4ab6038f, __VMLINUX_SYMBOL_STR(skb_push) },
+	{ 0x74aed678, __VMLINUX_SYMBOL_STR(mutex_lock) },
+	{ 0x8c03d20c, __VMLINUX_SYMBOL_STR(destroy_workqueue) },
+	{ 0x9545af6d, __VMLINUX_SYMBOL_STR(tasklet_init) },
+	{ 0xce8b1878, __VMLINUX_SYMBOL_STR(__x86_indirect_thunk_r14) },
+	{ 0xd6b8e852, __VMLINUX_SYMBOL_STR(request_threaded_irq) },
+	{ 0x6d2001df, __VMLINUX_SYMBOL_STR(skb_pull) },
+	{ 0x95229c60, __VMLINUX_SYMBOL_STR(ieee80211_ctstoself_get) },
+	{ 0xba7fa34b, __VMLINUX_SYMBOL_STR(wiphy_rfkill_stop_polling) },
+	{ 0x68f31cbd, __VMLINUX_SYMBOL_STR(__list_add_valid) },
+	{ 0xb77e245c, __VMLINUX_SYMBOL_STR(ieee80211_queue_delayed_work) },
+	{ 0xb5848bae, __VMLINUX_SYMBOL_STR(__iowrite32_copy) },
+	{ 0x82072614, __VMLINUX_SYMBOL_STR(tasklet_kill) },
+	{ 0x913749ea, __VMLINUX_SYMBOL_STR(arch_dma_alloc_attrs) },
+	{ 0x73fe52bb, __VMLINUX_SYMBOL_STR(pci_set_mwi) },
+	{ 0x7cd8d75e, __VMLINUX_SYMBOL_STR(page_offset_base) },
+	{ 0xd8b04f2d, __VMLINUX_SYMBOL_STR(ieee80211_stop_tx_ba_cb_irqsafe) },
+	{ 0x9c497f97, __VMLINUX_SYMBOL_STR(_dev_info) },
+	{ 0x8ff4079b, __VMLINUX_SYMBOL_STR(pv_irq_ops) },
+	{ 0xb601be4c, __VMLINUX_SYMBOL_STR(__x86_indirect_thunk_rdx) },
+	{ 0xbba70a2d, __VMLINUX_SYMBOL_STR(_raw_spin_unlock_bh) },
+	{ 0x13208bfa, __VMLINUX_SYMBOL_STR(queue_delayed_work_on) },
+	{ 0xdb7305a1, __VMLINUX_SYMBOL_STR(__stack_chk_fail) },
+	{ 0x8733954, __VMLINUX_SYMBOL_STR(wiphy_rfkill_set_hw_state) },
+	{ 0xe5815f8a, __VMLINUX_SYMBOL_STR(_raw_spin_lock_irq) },
+	{ 0x2ea2c95c, __VMLINUX_SYMBOL_STR(__x86_indirect_thunk_rax) },
+	{ 0xbfdcb43a, __VMLINUX_SYMBOL_STR(__x86_indirect_thunk_r11) },
+	{ 0xfc26ae1d, __VMLINUX_SYMBOL_STR(ieee80211_get_buffered_bc) },
+	{ 0xbdfb6dbb, __VMLINUX_SYMBOL_STR(__fentry__) },
+	{ 0x1a6904b8, __VMLINUX_SYMBOL_STR(pci_unregister_driver) },
+	{ 0x443a605, __VMLINUX_SYMBOL_STR(kmem_cache_alloc_trace) },
+	{ 0xe259ae9e, __VMLINUX_SYMBOL_STR(_raw_spin_lock) },
+	{ 0x4014354a, __VMLINUX_SYMBOL_STR(pci_ioremap_bar) },
+	{ 0xae5a255e, __VMLINUX_SYMBOL_STR(__dynamic_dev_dbg) },
+	{ 0x680ec266, __VMLINUX_SYMBOL_STR(_raw_spin_lock_irqsave) },
+	{ 0xcc03a88d, __VMLINUX_SYMBOL_STR(ieee80211_wake_queue) },
+	{ 0xdb760f52, __VMLINUX_SYMBOL_STR(__kfifo_free) },
+	{ 0x1a703ba1, __VMLINUX_SYMBOL_STR(crc_ccitt) },
+	{ 0x93d62ac9, __VMLINUX_SYMBOL_STR(ieee80211_get_hdrlen_from_skb) },
+	{ 0x6392f994, __VMLINUX_SYMBOL_STR(pci_set_power_state) },
+	{ 0xbc62bab9, __VMLINUX_SYMBOL_STR(ieee80211_register_hw) },
+	{ 0x9d94e5dd, __VMLINUX_SYMBOL_STR(led_classdev_unregister) },
+	{ 0x1eb9516e, __VMLINUX_SYMBOL_STR(round_jiffies_relative) },
+	{ 0x37a0cba, __VMLINUX_SYMBOL_STR(kfree) },
+	{ 0x69acdf38, __VMLINUX_SYMBOL_STR(memcpy) },
+	{ 0x49de97ff, __VMLINUX_SYMBOL_STR(pci_request_regions) },
+	{ 0xedc03953, __VMLINUX_SYMBOL_STR(iounmap) },
+	{ 0x1d44d4cb, __VMLINUX_SYMBOL_STR(__pci_register_driver) },
+	{ 0xed28bc93, __VMLINUX_SYMBOL_STR(led_classdev_suspend) },
+	{ 0x71fb2624, __VMLINUX_SYMBOL_STR(request_firmware) },
+	{ 0x97c15050, __VMLINUX_SYMBOL_STR(ieee80211_free_hw) },
+	{ 0xc75be80f, __VMLINUX_SYMBOL_STR(dev_warn) },
+	{ 0x2e0d2f7f, __VMLINUX_SYMBOL_STR(queue_work_on) },
+	{ 0x28318305, __VMLINUX_SYMBOL_STR(snprintf) },
+	{ 0x4ac77e15, __VMLINUX_SYMBOL_STR(pci_choose_state) },
+	{ 0xb0e602eb, __VMLINUX_SYMBOL_STR(memmove) },
+	{ 0x857977e6, __VMLINUX_SYMBOL_STR(consume_skb) },
+	{ 0x7f02188f, __VMLINUX_SYMBOL_STR(__msecs_to_jiffies) },
+	{ 0x40662378, __VMLINUX_SYMBOL_STR(skb_put) },
+	{ 0xa71b7166, __VMLINUX_SYMBOL_STR(pci_enable_device) },
+	{ 0x1857ca23, __VMLINUX_SYMBOL_STR(ieee80211_iterate_interfaces) },
+	{ 0x3283dd37, __VMLINUX_SYMBOL_STR(release_firmware) },
+	{ 0x36d7133e, __VMLINUX_SYMBOL_STR(ieee80211_start_tx_ba_cb_irqsafe) },
+	{ 0x9e7d6bd0, __VMLINUX_SYMBOL_STR(__udelay) },
+	{ 0x84ca6647, __VMLINUX_SYMBOL_STR(dma_ops) },
+	{ 0x859837d5, __VMLINUX_SYMBOL_STR(__skb_pad) },
+	{ 0xc1514a3b, __VMLINUX_SYMBOL_STR(free_irq) },
+	{ 0x63aa9b7a, __VMLINUX_SYMBOL_STR(pci_save_state) },
+};
+
+static const char __module_depends[]
+__used
+__attribute__((section(".modinfo"))) =
+"depends=mac80211,cfg80211,eeprom_93cx6,crc-ccitt";
+
+MODULE_ALIAS("pci:v000014C3d00007630sv*sd*bc*sc*i*");
+MODULE_ALIAS("pci:v000014C3d00007650sv*sd*bc*sc*i*");
+
+MODULE_INFO(srcversion, "F8B691AE2F721FE1A2079D3");
